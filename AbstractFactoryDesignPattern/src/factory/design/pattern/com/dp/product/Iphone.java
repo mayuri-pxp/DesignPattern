@@ -53,7 +53,7 @@ public class Iphone implements Device {
 	@Override
   public void getDeviceDetails()
   {
-    this.toString();
+		System.out.println(this.toString());
     
   }
 

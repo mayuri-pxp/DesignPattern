@@ -8,8 +8,11 @@ public class ClientTest {
  
 	public static void main(String[] args) {
 		
-	  //Tight coupling bad practice
-	  Laptop lappy = new Laptop("16 GB", "140 GB", "2,23 HGZ", true, true);
+	   //Tight coupling bad practice
+	   Computer lappy = new Laptop("16 GB", "140 GB", "2,23 HGZ", true, true);
+	   System.out.println("Lappy Config::"+lappy.toString());
+	   
+	   
 		//Client calls ComputerFactory to Create Computer with different configurations
 		Computer pc = ComputerFactory.getComputer("PC");
 		System.out.println("PC Config::"+pc);
