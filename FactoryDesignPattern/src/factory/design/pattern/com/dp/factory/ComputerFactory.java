@@ -9,16 +9,16 @@ public class ComputerFactory {
 	private ComputerFactory() {
  
 	}
-	
-  public static Computer getComputer(String type)
-  { 
-    if ("Laptop".equals(type))
-      return new Laptop("16 GB", "140 GB", "2,23 HGZ", true, true);
-    else if ("PC".equals(type))
-      return new PC("16 GB", "140 GB", "2,23 HGZ", true, true);
-    else if ("Server".equals(type))
-      return new Server("16 GB", "140 GB", "2,23 HGZ", true, true);
-    else
-    return null;
-  }
+
+	public static Computer getComputer(String type) throws Exception {
+		if ("Laptop".equals(type))
+			return new Laptop("16 GB", "141 GB", "2,23 HGZ", true, true);
+		else if ("PC".equals(type))
+			return new PC("16 GB", "140 GB", "2,23 HGZ", true, true);
+		else if ("Server".equals(type))
+			return new Server("16 GB", "140 GB", "2,23 HGZ", true, true);
+		else
+			throw new Exception("Invalid Computer Type");
+		// return null;
+	}
 }
